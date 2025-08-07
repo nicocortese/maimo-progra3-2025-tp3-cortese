@@ -13,7 +13,7 @@ const CharacterCard = ({ character }) => {
           alt={character.name}
         />
       </div>
-      <div className="flex flex-col flex-grow p-4">
+      <div className="flex flex-col flex-grow p-4 text-[#1d1e26]">
         <div className="min-h-16">
         <h2 className="text-2xl text-center font-bold">{character.name}</h2>
         </div>

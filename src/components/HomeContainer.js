@@ -12,7 +12,6 @@ const HomeContainer = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [allCharacters, setAllCharacters] = useState([]);
-  const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [search, setSearch] = useState("");
 
   const getCharacters = useCallback(async () => {
@@ -20,7 +19,6 @@ const HomeContainer = () => {
       setLoading(true);
       const response = await axios.get(`${BASE_URL}/character`);
       setCharacters(response.data.results);
-      setFilteredCharacters(response.data.results);
       setAllCharacters(response.data.results);
       setLoading(false);
     } catch (error) {
