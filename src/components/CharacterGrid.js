@@ -2,7 +2,7 @@ import CharacterCard from "@/components/CharacterCard";
 
 const CharacterGrid = ({ characters }) => {
   return (
-    <div className="grid grid-cols-12 gap-5 max-w-[1200px] mx-auto my-0">
+    <div className="grid grid-cols-12 gap-5 max-w-[1200px] mx-auto my-0 pb-6">
       {characters.map((character) => (
         <CharacterCard key={character.id} character={character} />
       ))}

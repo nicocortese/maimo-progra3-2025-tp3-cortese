@@ -3,3 +3,27 @@
 :root {
   --background: #ffffff;
 }
+
+body {
+  background-color: #0B0B0B;
+}
+
+h1, h2 {
+  font-family: "Share Tech Mono", monospace;
+}
+
+h3 {
+  font-family: "Share Tech Mono", monospace;
+}
+
+a {
+  font-family: "Kanit", sans-serif;
+}
+
+p {
+  font-family: "Kanit", sans-serif;
+}
+
+input {
+  font-family: "Share Tech Mono", monospace;
+}

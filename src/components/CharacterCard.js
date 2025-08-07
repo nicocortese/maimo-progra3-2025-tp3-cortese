@@ -1,19 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const CharacterCard = ({ characters }) => {
-  const character = {
-    id: `1`,
-    name: "Rick",
-    status: "Alive",
-    origin: {
-      name: "Earth (C-137)",
-    },
-    image: "/assets/rick.jpeg",
-  };
+const CharacterCard = ({ character }) => {
   return (
-    <article className="col-span-3 bg-[#006b46] rounded-3xl p-3">
-      <div className="mb-4">
+    <article className="col-span-3 bg-[#a6eee6ff] rounded-3xl flex flex-col drop-shadow-[0_0_200px_rgba(217,217,217,0.2)]">
+      <div className="flex justify-center ">
         <Image
           className="rounded-t-3xl"
           src={character.image}
@@ -22,11 +13,21 @@ const CharacterCard = ({ characters }) => {
           alt={character.name}
         />
       </div>
-      <h2 className="text-2xl mb-2">{character.name}</h2>
-      <p>{character.status}</p>
-      <p className="mb-4">{character.origin.name}</p>
+      <div className="flex flex-col flex-grow p-4">
+        <div className="min-h-16">
+        <h2 className="text-2xl text-center font-bold">{character.name}</h2>
+        </div>
+        <div className="flex-grow flex flex-col justify-center">
+        <p className= "w-full text-center">
+          <span className="font-semibold">Status:</span> {character.status}
+        </p>
+        <p className="w-full text-center">
+          <span className="font-semibold">Origin:</span> {character.origin.name}
+        </p>
+      </div>
+      </div>
       <Link
-        className="bg-[#f6e652] flex justify-center rounded-3xl p-4 hover:bg-[#D9D9D9]"
+        className="mt-auto bg-[#fae48bff] w-full text-center text-[20px] rounded-b-3xl p-4 hover:bg-[#d9d9d9]"
         href={`/character/${character.id}`}
       >
         Ver más

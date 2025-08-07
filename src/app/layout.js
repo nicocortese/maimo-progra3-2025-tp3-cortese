@@ -1,15 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Share_Tech_Mono, Kanit } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const shareTechMono = Share_Tech_Mono({
+  subsets: ['latin'],
+  weight: '400', 
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const kanit = Kanit ({
+  subsets: ['latin'],
+  weight: ["400", "500", "600", "700", "800"],
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${shareTechMono.variable} ${kanit.variable}`}
       >
         {children}
       </body>
